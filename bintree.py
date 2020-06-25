@@ -42,5 +42,12 @@ def insert(root,node):
             
     
 
+def inorder(root):
+    # function that takes a node object, traverses each node
+    # and prints the value of each node.
 
+    if root:
+        inorder(root.left)
+        print(root.val)
+        inorder(root.right)
 
