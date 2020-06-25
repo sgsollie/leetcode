@@ -1,3 +1,8 @@
+"""
+basic implementation of linear scan sort algorithm
+
+"""
+
 def lin_scan(lst):
     
     for i in range(len(lst)-1):
