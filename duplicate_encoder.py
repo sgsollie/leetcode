@@ -15,7 +15,7 @@ Assumptions:
 5. iterate over each character again. Check how many times we've seen it in the first pass
 6. Generate an output string by appending either "(" or ")" based on how many times we've seen this char 
 
-Time Complexity - O(n^2)
+Time Complexity - O(n) (iterating over word twice but not n * n )
 Space Complexity - O(n)
 
 """
