@@ -18,14 +18,49 @@ given a number:
    add previous two numbers and append the list with the result
 5. return last result.
 """
-
+#This one needs to take into account out of range values in the list. So easier to start at zero in the sequence
 def n_fib(n):
     nums = [0,1]
 	
     for i in range(2, n):
         nums.append(nums[i-1] + nums[i-2])
     
-    print(nums)
-    return nums[-1] 
+    #print(nums)
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return nums[-1]
     
-print(n_fib(4))
+#print(n_fib(4))
+
+
+"""
+Recursive Solution with memoization below:
+Time - O(n) 
+Space - O(n)
+
+"""
+
+def memoize(f):
+    memo = {}
+    def helper(x):                  #arguments for helper are the arguments of the original function.
+        print(x)
+        if x not in memo:
+            memo[x] = f(x)
+            #print(memo[x])
+        return memo[x]
+    return helper
+
+
+@memoize
+def fibRec(n):
+    #base case
+    if n <= 1:
+        return n
+    #recursive case    
+    else:
+        return fibRec(n-1) + fibRec(n-2)
+
+print(fibRec(4))
