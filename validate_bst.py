@@ -19,7 +19,7 @@ def preOrder(tree):
         preOrder(tree.right)
 
 def treecheck(tree):
-    if tree.left.key <= tree.key and tree.right.key > tree.key:
+    if tree.left.key <= tree.key and tree.right.key > tree.key:             # TODO add extra logic to deal with just one child node
         return True
     else:
         return False
