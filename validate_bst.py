@@ -30,6 +30,8 @@ r.left = tree(3)
 r.left.left = tree(2)
 r.left.right = tree(4)
 r.right = tree(7)
+preOrder(r)
+
 
 print()
 
