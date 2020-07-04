@@ -41,16 +41,16 @@ def get_max_profit(stock_prices):
 
 
     while ileft < len(stock_prices):
-        if left > stock_prices[ileft] :
+        if left > stock_prices[ileft]:
             left = stock_prices[ileft]
         ileft += 1
     
 
-    while iright > 0 :
+    while iright > 0:
         if right < stock_prices[iright]:
             right = stock_prices[iright]
         iright -= 1
-        
+
     profit = right - left
     return profit
 
