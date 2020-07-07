@@ -19,8 +19,8 @@ def bfs(node):
 
     while queue:
         current = queue.pop(0)
-        print(current)
-
+        print(current)                          # If you were looking for a specific key this is where you'd check -
+                                                # - if you had that and if you wanted - break & print/return it.
         for i in current.children:
             if i not in visited:
                 visited.append(i)
