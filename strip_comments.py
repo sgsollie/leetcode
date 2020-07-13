@@ -1,3 +1,9 @@
+"""
+
+Working solution for https://www.codewars.com/kata/51c8e37cee245da6b40000bd
+
+"""
+
 def solution(string,markers):
     lst = string.split("\n")
     print(lst)
@@ -9,18 +15,19 @@ def solution(string,markers):
     for i in range(len(lst)):
         intersection = list(markerset.intersection(lst[i]))
         if intersection:
-            sep = intersection[0]
-        #rest = text.split(sep, 1)[0]
-            print(intersection)
-            if i == lst[-1]:
-                x = lst[i].partition(sep)
-                lst[i] = x[0]
-            else: 
-                x = lst[i].partition(sep)
-                lst[i] = x[0] + "\n"
-                #lst[i] = lst[i][:chars.index(intersection[0])] + "\n"
-        else:
-            lst[i] = lst[i] + "\n"       
+            for j in range(len(intersection)):
+                sep = intersection[j]
+                if i == len(lst)-1:
+                    x = lst[i].partition(sep)
+                    lst[i] = x[0].rstrip()
+                else: 
+                    x = lst[i].partition(sep)
+                    lst[i] = x[0].rstrip() + "\n"
+        elif i == len(lst)-1:
+            lst[i] = lst[i].rstrip()
+        else: 
+            lst[i] = lst[i].rstrip() + "\n"
+
     print(lst)
     return "".join(lst)
 
