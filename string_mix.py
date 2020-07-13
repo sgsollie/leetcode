@@ -11,20 +11,8 @@ def mix(s1, s2):
     for i in s2:
         if i.islower():
             s2d[i] = s2d.get(i, 0) + 1
-          
-
-    if len(s1d) > len(s2d):
-        longest = s1d
-        shortest = s2d
-    else:
-        longest = s2d
-        shortest = s1d
-
+    
     Cdict = Counter(s1d) + Counter(s2d) 
-    print(Cdict) 
-          
-   # print(longest) 
-
     outlst = []
 
     for i in Cdict:
@@ -35,7 +23,7 @@ def mix(s1, s2):
                 prefix = "2:"
             elif s1d[i] == s2d[i]:
                 prefix = "=:"
-            most = max(shortest[i], longest[i])
+            most = max(s1d[i], s2d[i])
             if most > 1:    
                 outlst.append(prefix + i * most)
         else:
@@ -49,5 +37,3 @@ def mix(s1, s2):
     outlst.sort(key=len,reverse=True)
 
     return "/".join(outlst)
-
-print(mix("In many languages", "there's a pair of functions"))
