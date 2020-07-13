@@ -11,7 +11,7 @@
 
 """
 
-We traverse the tree using a depth first search. If node.val falls outside the range [L, R], 
+We traverse the tree using a depth first search. If root.val falls outside the range [L, R], 
 (for example node.val < L), then we know that only the right branch could have nodes with value inside [L, R].
 
 """
