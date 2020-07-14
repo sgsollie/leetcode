@@ -20,4 +20,4 @@ class Solution:
         t1.left = self.mergeTrees(t1.left, t2.left)             # set left and right vals to whatever recursion returns
         t1.right = self.mergeTrees(t1.right, t2.right)
         
-        return t1
+        return t1                                               # the new tree is actually just t1 modified
