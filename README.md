@@ -1,2 +1,2 @@
 # leetcode
-This will be an archive for various leetcode and codewars challenges
+This will be an archive for various leetcode and codewars challenges & other useful snippets.
